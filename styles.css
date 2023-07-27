@@ -1,22 +1,38 @@
+body {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000000;
+}
+
 #game-board {
   display: flex;
   justify-content: space-around;
-  padding: 50px;
+  align-items: center;
+  padding: 80px;
   background-image: url('https://cff2.earth.com/uploads/2022/01/15092418/Life-on-Earth-960x640.jpg');
+  background-size: cover;
+
 }
 
 #player-card, #computer-card {
+
   width: 210px;
   height: 350px;
   background-image: url('https://img.myloview.com/stickers/dark-space-background-for-astrology-witchcraft-fortune-telling-heavenly-abstract-tarot-card-banner-with-the-moon-and-copy-space-vintage-vector-template-700-255889580.jpg');
-  background-size: cover;
+  /* padding: 40px; */
+  /* background-size: 70%; */
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 button {
   height: 100px;
   width: 300px;
-  background-color: transparent;
+  background-image: url('https://www.stsci.edu/files/live/sites/www/files/home/_images/gallery-items/small-magellanic-cloud.jpg');
   color: white;
   font-size: 50px;
   border-color: red;
+  border-width: 10px;
 }
