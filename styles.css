@@ -36,12 +36,12 @@ p1.image-text {
 }
 
 
-p3.image-text { /*player card*/
+p3.image-text { /*player*/
   grid-column: 1;
   grid-row: 3;
   font-family: fantasy;
   font-size: 70px;
-  background-image: url('https://media.tenor.com/IIQ-ca9nBu0AAAAd/space.gif');
+  background-image: url('https://media.tenor.com/wN0_kpxQQj8AAAAd/xhynk-space-travel.gif');
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -58,12 +58,12 @@ p3.image-text { /*player card*/
   background-repeat: no-repeat;
 }
 
-p4.image-text { /*computer card*/
+p4.image-text { /*computer*/
   grid-column: 3;
   grid-row: 3;
   font-family: fantasy;
   font-size: 70px;
-  background-image: url('https://media.tenor.com/IIQ-ca9nBu0AAAAd/space.gif');
+  background-image: url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmVjajlsdWM5MWYyeGk0OG55NnFiaXJjN2NybGEyNzJmYWNwbW8xZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/s1P4kzgXdyZK8/giphy.gif');
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
