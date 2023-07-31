@@ -21,20 +21,31 @@ body {
   background-size: cover;
 }
 
-p1 { /*SPACE WAR*/
+
+p1.image-text {
   grid-column: 2;
   grid-row: 1;
+  font-size: 36px;
+  font-family: fantasy;
   font-size: 100px;
-  color: white;
-  text-align: center;
+  background-image: url('https://media.tenor.com/IIQ-ca9nBu0AAAAd/space.gif');
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-fill-color: transparent;
 }
 
-p3 { /*player card*/
+
+p3.image-text { /*player card*/
   grid-column: 1;
   grid-row: 3;
-  font-size: 50px;
-  color: white;
-  text-align: center;
+  font-family: fantasy;
+  font-size: 70px;
+  background-image: url('https://media.tenor.com/IIQ-ca9nBu0AAAAd/space.gif');
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-fill-color: transparent;
 }
 
 #player-card {
@@ -47,12 +58,16 @@ p3 { /*player card*/
   background-repeat: no-repeat;
 }
 
-p4 { /*computer card*/
+p4.image-text { /*computer card*/
   grid-column: 3;
   grid-row: 3;
-  font-size: 50px;
-  color: white;
-  text-align: top;
+  font-family: fantasy;
+  font-size: 70px;
+  background-image: url('https://media.tenor.com/IIQ-ca9nBu0AAAAd/space.gif');
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-fill-color: transparent;
 }
 
 #computer-card {
@@ -61,8 +76,6 @@ p4 { /*computer card*/
   width: 210px;
   height: 350px;
   background-image: url('https://img.myloview.com/stickers/dark-space-background-for-astrology-witchcraft-fortune-telling-heavenly-abstract-tarot-card-banner-with-the-moon-and-copy-space-vintage-vector-template-700-255889580.jpg');
-  /* padding: 40px; */
-  /* background-size: 70%; */
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -70,21 +83,31 @@ p4 { /*computer card*/
 button {
   grid-column: 2;
   grid-row: 2;
-  height: 100px;
+  height: 300px;
   width: 300px;
-  background-image: url('https://www.stsci.edu/files/live/sites/www/files/home/_images/gallery-items/small-magellanic-cloud.jpg');
+  border-radius: 50%;
+  background-image: url('https://bestanimations.com/media/planets/39272898venus-planet-animation-5.gif');
+  background-size: 150%;
+  background-repeat: no-repeat;
+  background-position: center;
   font-size: 50px;
-  border-color: red;
-  border-width: 10px;
+  border-color: transparent;
+  color: orangered;
+  font-family: fantasy;
+  /* font-weight: bold; */
+  font-size: 70px;
+  text-shadow: 5px 5px 0 #000, 5px 5px 0 #000, 5px 5px 0 #000, 5px 5px 0 #000;
+  cursor: pointer;
 }
 
-p2 {
+p2 { /*instructions*/
   grid-column: 2;
   grid-row: 3;
-  text-align: left;
+  text-align: center;
   font-size: 16px;
   background-color: transparent;
   color: rgb(236, 1, 1);
   border-color: rgb(127, 11, 92);
   border-width: 500px;
+  font-weight: bold;
 }

@@ -6,7 +6,6 @@ const playerCardImg = document.getElementById('player-card');
 const computerCardImg = document.getElementById('computer-card');
 const drawButton = document.getElementById('draw-button');
 
-
 fetch('https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1')
   .then(response => response.json())
   .then(data => {
@@ -40,7 +39,7 @@ function shipPlayer() {
   document.body.appendChild(kaboom);
   setTimeout(() => {
     document.body.removeChild(kaboom);
-  }, 2000);
+  }, 3000);
 }
 
 function showExplosionPlayer() {
@@ -50,14 +49,14 @@ function showExplosionPlayer() {
   kaboom.style.position = 'absolute';
   kaboom.style.width = '274px';
   kaboom.style.height = '400px';
-  kaboom.style.top = '45%';
-  kaboom.style.left = '17%';
+  kaboom.style.top = '350px';
+  kaboom.style.left = '300px';
   kaboom.style.transform = 'translate(-50%, -50%)';
   kaboom.style.zIndex = '8999';
   document.body.appendChild(kaboom);
   setTimeout(() => {
     document.body.removeChild(kaboom);
-  }, 2000);
+  }, 3000);
 }
 
 function shipComputer() {
@@ -75,7 +74,7 @@ function shipComputer() {
   document.body.appendChild(kaboom);
   setTimeout(() => {
     document.body.removeChild(kaboom);
-  }, 2000);
+  }, 3000);
 }
 
 function showExplosionComputer() {
@@ -85,14 +84,14 @@ function showExplosionComputer() {
   kaboom.style.position = 'absolute';
   kaboom.style.width = '274px';
   kaboom.style.height = '400px';
-  kaboom.style.top = '45%';
-  kaboom.style.left = '83%';
+  kaboom.style.top = '350px';
+  kaboom.style.right = '0px';
   kaboom.style.transform = 'translate(-50%, -50%)';
   kaboom.style.zIndex = '8999';
   document.body.appendChild(kaboom);
   setTimeout(() => {
     document.body.removeChild(kaboom);
-  }, 2000);
+  }, 3000);
 }
 
 function delayedAlert(msg, delay) {
@@ -110,22 +109,22 @@ function determineWinner() {
   let message;
 
   if (playerValue > computerValue) {
-      message = 'Player wins!';
+      message = 'You Won!';
       showExplosionComputer()
       shipPlayer()
   } else if (computerValue > playerValue) {
-      message = 'Computer wins!';
+      message = 'You Lost!';
       showExplosionPlayer()
       shipComputer ()
   } else {
-      message = 'Tie!';
+      message = 'It\'s a Tie!';
       showExplosionPlayer()
       showExplosionComputer()
       shipPlayer()
       shipComputer ()
   }
 
-  delayedAlert(message, 500).then(() => {
+  delayedAlert(message, 1000).then(() => {
       playerCardImg.src = 'https://img.myloview.com/stickers/dark-space-background-for-astrology-witchcraft-fortune-telling-heavenly-abstract-tarot-card-banner-with-the-moon-and-copy-space-vintage-vector-template-700-255889580.jpg';
       computerCardImg.src = 'https://img.myloview.com/stickers/dark-space-background-for-astrology-witchcraft-fortune-telling-heavenly-abstract-tarot-card-banner-with-the-moon-and-copy-space-vintage-vector-template-700-255889580.jpg';
   });

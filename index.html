@@ -6,17 +6,22 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
+    <div id="kaboom"></div>
     <section id="game-board">
-        <p3>Player</p3>
-        <p1>Space War</p1>
-        <p4>Computer</p4>
+        <p3 class="image-text">Player</p3>
+        <p1 class="image-text">Space War</p1>
+        <p4 class="image-text">Computer</p4>
         <img id="player-card" src="">
         <button id="draw-button">Attack!</button>
         <img id="computer-card" src="">
-        <p2 id="instructions">- This game uses one deck of 52 playing cards.
-<br>
-            - The card's value depends on the number on its face with royal cards having the following values: Ace = 14, King = 13, Queen = 12, Jack = 11.
+        <p2 id="instructions">
+            - This game uses one deck of 52 playing cards.
+            <br>
+            - The card's value depends on the number on its face.
+            <br>
+            - Royal cards have the following values:
+            <br>
+                (Ace = 14, King = 13, Queen = 12, Jack = 11.)
             <br>
             - The Player's card is displayed on the left.
             <br>
@@ -32,7 +37,7 @@
             <br>
             - If both card values are the same, this results in a tie.
             <br>
-            - Once the winner or tie is determined, a new deck is shuffled and the game starts over.</p2>
+            - Once the winner or tie is determined, the game starts over.</p2>
     </section>
     <script src="cardGame.js"></script>
 </body>
