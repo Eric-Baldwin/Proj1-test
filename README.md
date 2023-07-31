@@ -7,7 +7,7 @@
 Download and Launch Instructions:
 
 - Fork and Clone a copy of the repository.
-- Navigate to the directory "Proj1-test" directory.
+- Navigate to the "Proj1-test" directory.
 - Enter "$ npm start" into your Ubuntu terminal to launch the application.
 
 
