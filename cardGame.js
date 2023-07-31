@@ -6,6 +6,7 @@ const playerCardImg = document.getElementById('player-card');
 const computerCardImg = document.getElementById('computer-card');
 const drawButton = document.getElementById('draw-button');
 
+
 fetch('https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1')
   .then(response => response.json())
   .then(data => {
@@ -24,6 +25,76 @@ drawButton.addEventListener('click', () => {
     })
 });
 
+function shipPlayer() {
+  const explosionGif = 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c26b88f6-edf7-4b66-b09e-ebc0c71ac6f1/dbn7a6-dcc9a7df-63d4-49d5-940a-b58097a42c21.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2MyNmI4OGY2LWVkZjctNGI2Ni1iMDllLWViYzBjNzFhYzZmMVwvZGJuN2E2LWRjYzlhN2RmLTYzZDQtNDlkNS05NDBhLWI1ODA5N2E0MmMyMS5naWYifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.nLIBXViC-TmdFUHCnHD7M_fWI9Ijrd6I0BPf37lqaow';
+  const kaboom = document.createElement('img');
+  kaboom.src = explosionGif;
+  kaboom.style.position = 'absolute';
+  kaboom.style.width = '274px';
+  kaboom.style.height = '400px';
+  kaboom.style.top = '18%';
+  kaboom.style.left = '60%';
+  kaboom.style.transform = 'translate(-50%, -50%)';
+  kaboom.style.transform = 'rotate(90deg)';
+  kaboom.style.zIndex = '9999';
+  document.body.appendChild(kaboom);
+  setTimeout(() => {
+    document.body.removeChild(kaboom);
+  }, 2000);
+}
+
+function showExplosionPlayer() {
+  const explosionGif = 'https://media.tenor.com/ptNG8DQFPD4AAAAj/explotion-explode.gif';
+  const kaboom = document.createElement('img');
+  kaboom.src = explosionGif;
+  kaboom.style.position = 'absolute';
+  kaboom.style.width = '274px';
+  kaboom.style.height = '400px';
+  kaboom.style.top = '45%';
+  kaboom.style.left = '17%';
+  kaboom.style.transform = 'translate(-50%, -50%)';
+  kaboom.style.zIndex = '8999';
+  document.body.appendChild(kaboom);
+  setTimeout(() => {
+    document.body.removeChild(kaboom);
+  }, 2000);
+}
+
+function shipComputer() {
+  const explosionGif = 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c26b88f6-edf7-4b66-b09e-ebc0c71ac6f1/dbn7a6-dcc9a7df-63d4-49d5-940a-b58097a42c21.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2MyNmI4OGY2LWVkZjctNGI2Ni1iMDllLWViYzBjNzFhYzZmMVwvZGJuN2E2LWRjYzlhN2RmLTYzZDQtNDlkNS05NDBhLWI1ODA5N2E0MmMyMS5naWYifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.nLIBXViC-TmdFUHCnHD7M_fWI9Ijrd6I0BPf37lqaow';
+  const kaboom = document.createElement('img');
+  kaboom.src = explosionGif;
+  kaboom.style.position = 'absolute';
+  kaboom.style.width = '274px';
+  kaboom.style.height = '400px';
+  kaboom.style.top = '18%';
+  kaboom.style.left = '22%';
+  kaboom.style.transform = 'translate(-50%, -50%)';
+  kaboom.style.transform = 'rotate(270deg)';
+  kaboom.style.zIndex = '9999';
+  document.body.appendChild(kaboom);
+  setTimeout(() => {
+    document.body.removeChild(kaboom);
+  }, 2000);
+}
+
+function showExplosionComputer() {
+  const explosionGif = 'https://media.tenor.com/ptNG8DQFPD4AAAAj/explotion-explode.gif';
+  const kaboom = document.createElement('img');
+  kaboom.src = explosionGif;
+  kaboom.style.position = 'absolute';
+  kaboom.style.width = '274px';
+  kaboom.style.height = '400px';
+  kaboom.style.top = '45%';
+  kaboom.style.left = '83%';
+  kaboom.style.transform = 'translate(-50%, -50%)';
+  kaboom.style.zIndex = '8999';
+  document.body.appendChild(kaboom);
+  setTimeout(() => {
+    document.body.removeChild(kaboom);
+  }, 2000);
+}
+
 function delayedAlert(msg, delay) {
   return new Promise((resolve, reject) => {
       setTimeout(() => {
@@ -40,10 +111,18 @@ function determineWinner() {
 
   if (playerValue > computerValue) {
       message = 'Player wins!';
+      showExplosionComputer()
+      shipPlayer()
   } else if (computerValue > playerValue) {
       message = 'Computer wins!';
+      showExplosionPlayer()
+      shipComputer ()
   } else {
       message = 'Tie!';
+      showExplosionPlayer()
+      showExplosionComputer()
+      shipPlayer()
+      shipComputer ()
   }
 
   delayedAlert(message, 500).then(() => {

@@ -1,3 +1,5 @@
+
+
 body {
   display: flex;
     justify-content: center;
@@ -7,17 +9,55 @@ body {
 }
 
 #game-board {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3 1fr);
+  grid-gap: 10px;
+  justify-items: center;
   align-items: center;
-  padding: 80px;
-  background-image: url('https://cff2.earth.com/uploads/2022/01/15092418/Life-on-Earth-960x640.jpg');
+  justify-content: space-between;
+  align-content: center;
+  background-image: url('https://i.pinimg.com/originals/f4/34/e8/f434e86cdc40ef068b7783d150f8a65c.gif');
   background-size: cover;
-
 }
 
-#player-card, #computer-card {
+p1 { /*SPACE WAR*/
+  grid-column: 2;
+  grid-row: 1;
+  font-size: 100px;
+  color: white;
+  text-align: center;
+}
 
+p3 { /*player card*/
+  grid-column: 1;
+  grid-row: 3;
+  font-size: 50px;
+  color: white;
+  text-align: center;
+}
+
+#player-card {
+  grid-column: 1;
+  grid-row: 2;
+  width: 210px;
+  height: 350px;
+  background-image: url('https://img.myloview.com/stickers/dark-space-background-for-astrology-witchcraft-fortune-telling-heavenly-abstract-tarot-card-banner-with-the-moon-and-copy-space-vintage-vector-template-700-255889580.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+p4 { /*computer card*/
+  grid-column: 3;
+  grid-row: 3;
+  font-size: 50px;
+  color: white;
+  text-align: top;
+}
+
+#computer-card {
+  grid-column: 3;
+  grid-row: 2;
   width: 210px;
   height: 350px;
   background-image: url('https://img.myloview.com/stickers/dark-space-background-for-astrology-witchcraft-fortune-telling-heavenly-abstract-tarot-card-banner-with-the-moon-and-copy-space-vintage-vector-template-700-255889580.jpg');
@@ -28,11 +68,23 @@ body {
 }
 
 button {
+  grid-column: 2;
+  grid-row: 2;
   height: 100px;
   width: 300px;
   background-image: url('https://www.stsci.edu/files/live/sites/www/files/home/_images/gallery-items/small-magellanic-cloud.jpg');
-  color: white;
   font-size: 50px;
   border-color: red;
   border-width: 10px;
+}
+
+p2 {
+  grid-column: 2;
+  grid-row: 3;
+  text-align: left;
+  font-size: 16px;
+  background-color: transparent;
+  color: rgb(236, 1, 1);
+  border-color: rgb(127, 11, 92);
+  border-width: 500px;
 }

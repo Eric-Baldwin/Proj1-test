@@ -1,6 +1,6 @@
 # SDI Blended Project 1 Scaffold
 
-**** War Card Game ****
+**** Space War: Card Game ****
 
 - This game uses one deck of 52 playing cards.
 

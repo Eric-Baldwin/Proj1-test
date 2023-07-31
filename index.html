@@ -6,10 +6,33 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <section id="game-board">
+        <p3>Player</p3>
+        <p1>Space War</p1>
+        <p4>Computer</p4>
         <img id="player-card" src="">
         <button id="draw-button">Attack!</button>
         <img id="computer-card" src="">
+        <p2 id="instructions">- This game uses one deck of 52 playing cards.
+<br>
+            - The card's value depends on the number on its face with royal cards having the following values: Ace = 14, King = 13, Queen = 12, Jack = 11.
+            <br>
+            - The Player's card is displayed on the left.
+            <br>
+            - The Computer's card is displayed on the right.
+            <br>
+            - Clicking the "Attack!" button executes the game.
+            <br>
+            - The top card of the deck is assigned to the Player.
+            <br>
+            - The second card of the deck is assigned to the Computer.
+            <br>
+            - Whoever has the higher card value is determined to be the winner.
+            <br>
+            - If both card values are the same, this results in a tie.
+            <br>
+            - Once the winner or tie is determined, a new deck is shuffled and the game starts over.</p2>
     </section>
     <script src="cardGame.js"></script>
 </body>
